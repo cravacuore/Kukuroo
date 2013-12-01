@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/miniGobstones/src-gen" editDirectory="/miniGobstones.edit/src"
+    editorDirectory="/miniGobstones.editor/src" modelPluginID="miniGobstones" forceOverwrite="true"
+    modelName="MiniGobstones" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="miniGobstones.edit"
+    editorPluginID="miniGobstones.editor" runtimeVersion="2.9">
+  <genPackages prefix="MiniGobstones" basePackage="org" disposableProviderFactory="true"
+      fileExtensions="mgbs" ecorePackage="MiniGobstones.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MiniGobstones.ecore#//Color">
+      <genEnumLiterals ecoreEnumLiteral="MiniGobstones.ecore#//Color/Verde"/>
+      <genEnumLiterals ecoreEnumLiteral="MiniGobstones.ecore#//Color/Rojo"/>
+      <genEnumLiterals ecoreEnumLiteral="MiniGobstones.ecore#//Color/Azul"/>
+      <genEnumLiterals ecoreEnumLiteral="MiniGobstones.ecore#//Color/Negro"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MiniGobstones.ecore#//Direccion">
+      <genEnumLiterals ecoreEnumLiteral="MiniGobstones.ecore#//Direccion/Norte"/>
+      <genEnumLiterals ecoreEnumLiteral="MiniGobstones.ecore#//Direccion/Sur"/>
+      <genEnumLiterals ecoreEnumLiteral="MiniGobstones.ecore#//Direccion/Este"/>
+      <genEnumLiterals ecoreEnumLiteral="MiniGobstones.ecore#//Direccion/Oeste"/>
+    </genEnums>
+    <genClasses ecoreClass="MiniGobstones.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniGobstones.ecore#//Model/main"/>
+    </genClasses>
+    <genClasses ecoreClass="MiniGobstones.ecore#//Procedure">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MiniGobstones.ecore#//Procedure/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniGobstones.ecore#//Procedure/commands"/>
+    </genClasses>
+    <genClasses ecoreClass="MiniGobstones.ecore#//Command"/>
+    <genClasses ecoreClass="MiniGobstones.ecore#//Poner">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MiniGobstones.ecore#//Poner/color"/>
+    </genClasses>
+    <genClasses ecoreClass="MiniGobstones.ecore#//Mover">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MiniGobstones.ecore#//Mover/dir"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="miniGobstones" nsURI="http://www.MiniGobstones.org" nsPrefix="miniGobstones">
+  <eClassifiers xsi:type="ecore:EClass" name="Model">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="main" eType="#//Procedure"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Procedure">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="commands" upperBound="-1"
+        eType="#//Command" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Command"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Poner" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//Color"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Color">
+    <eLiterals name="Verde" literal="Verde"/>
+    <eLiterals name="Rojo" value="1" literal="Rojo"/>
+    <eLiterals name="Azul" value="2" literal="Azul"/>
+    <eLiterals name="Negro" value="3" literal="Negro"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Mover" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dir" eType="#//Direccion"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Direccion">
+    <eLiterals name="Norte" literal="Norte"/>
+    <eLiterals name="Sur" value="1" literal="Sur"/>
+    <eLiterals name="Este" value="2" literal="Este"/>
+    <eLiterals name="Oeste" value="3" literal="Oeste"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,31 @@
+grammar org.MiniGobstones with org.eclipse.xtext.common.Terminals
+
+generate miniGobstones "http://www.MiniGobstones.org"
+
+Model:
+	main = Procedure;
+	
+Procedure:
+	'procedure' name = ID '{'
+		commands += Command*
+	'}'
+;
+
+Command:
+	Poner | Mover 
+;
+
+Poner:
+	{Poner}
+	'Poner' '(' color = Color ')'
+;
+
+
+enum Color: Verde | Rojo | Azul | Negro;
+
+Mover:
+	{Mover}
+	'Mover' '(' dir = Direccion ')'
+;
+
+enum Direccion: Norte | Sur | Este | Oeste;
